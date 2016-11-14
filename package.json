@@ -1,0 +1,21 @@
+{
+  "name": "das-machine",
+  "version": "0.0.7",
+  "description": "just a good state machine",
+  "main": "machine.js",
+  "scripts": {
+    "test": "_mocha",
+    "coverage": "istanbul cover _mocha -- -R spec"
+  },
+  "keywords": [
+    "state",
+    "machine"
+  ],
+  "author": "Zibx",
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "chai": "*",
+    "mocha": "*",
+    "istanbul": "*"
+  }
+}
