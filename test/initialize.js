@@ -95,9 +95,9 @@ describe('initialize', function() {
     });
 
     it('should init with linking syntax. Like knitting', function () {
-        var test = new StateMachine('A').link('B').link('C').link('A')
-            .pick('B').link('B')
-            .pick('B').link('D').link('B')
+        var test = new StateMachine('A').link('B').link('C').link('A') // A->B->C->A
+            .pick('B').link('B') // B -> B
+            .pick('B').link('D').link('B') // B<->D
             .pick('A');
         testIt(test);
     });
