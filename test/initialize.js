@@ -111,6 +111,10 @@ describe('initialize', function() {
     });
     it('should init with multilinks syntax', function () {
         var test = new StateMachine()
+            .on('enter', function(what, from){
+                console.log(from.name +' -> '+ what.name);
+            })
+
             .add('A').link('B').links('B', 'C', 'D')
             .pick('D').link('B')
             .pick('C').link('A');
